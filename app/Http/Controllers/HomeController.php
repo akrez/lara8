@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\View\View
+     * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {

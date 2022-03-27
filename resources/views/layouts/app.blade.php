@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
     <title>@yield('title', 'Title')</title>
     <!-- Font Sahel -->
@@ -26,7 +28,7 @@
 
 <body class="hold-transition sidebar-mini layout-fixed rtl">
     @yield('POS_BEGIN')
-    <div class="wrapper">
+    <div id="app" class="wrapper">
         <!-- Navbar -->
         @include('layouts.navbar')
         <!-- Main Sidebar Container -->

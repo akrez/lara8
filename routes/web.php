@@ -1,5 +1,6 @@
 <?php
 
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes(['verify' => true]);
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get(RouteServiceProvider::HOME, [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');

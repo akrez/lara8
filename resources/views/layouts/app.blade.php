@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
-    <title>@yield('title', 'Title')</title>
+    <title>@yield('title', config('app.name'))</title>
     <!-- Font Sahel -->
     <link rel="stylesheet" href="{{asset('css/font-sahel.css')}}">
     <!-- Font SahelFD -->
@@ -26,7 +26,7 @@
     @yield('POS_HEAD')
 </head>
 
-<body class="login-page">
+<body class="@yield('body_class')">
     @yield('POS_BEGIN')
     @yield('content')
     <!-- ./wrapper -->

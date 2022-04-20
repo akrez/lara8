@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('body_class', 'login-page pt-5 text-right rtl')
+@section('title', __('Reset Password'))
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

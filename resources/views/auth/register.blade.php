@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@section('body_class', 'login-page pt-5 text-right rtl')
 @section('title', __('Register'))
 
 @section('content')

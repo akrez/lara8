@@ -49,7 +49,7 @@
                                 @else
                                 <li class="nav-item dropdown">
 
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         {{ Auth::user()->name }}
                                     </a>
 
@@ -99,7 +99,7 @@
                         @else
                         <li>
                             <a href="#" class="nav-link text-dark">
-                                <i class="fab fa-user me-2"></i>
+                                <i class="fas fa-user me-2"></i>
                                 {{ Auth::user()->name }}
                             </a>
                         </li>

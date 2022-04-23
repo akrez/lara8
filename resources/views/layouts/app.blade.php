@@ -109,7 +109,9 @@
 
             </div>
             <div class="col-sm-9">
-                @yield('content')
+                <div class="row">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>

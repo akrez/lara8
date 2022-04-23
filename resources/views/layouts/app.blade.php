@@ -73,47 +73,7 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-sm-3 mb-3">
-                <div class="d-flex flex-column flex-shrink-0 text-dark bg-light p-3 rounded rounded-3">
-                    <ul class="nav nav-pills flex-column mb-auto">
-
-                        <li class="nav-item">
-                            <a href="{{ route('home') }}" class="nav-link active">
-                                <i class="fas fa-home me-2"></i>
-                                {{__('Go Home')}}
-                            </a>
-                        </li>
-
-                        <hr>
-
-                        @guest
-                        @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a href="{{ route('login') }}" class="nav-link text-dark">
-                                <i class="fas fa-door-open me-2"></i>
-                                {{__('Login')}}
-                            </a>
-                        </li>
-                        @endif
-                        @else
-                        <li>
-                            <a href="#" class="nav-link text-dark">
-                                <i class="fas fa-user me-2"></i>
-                                {{ Auth::user()->name }}
-                            </a>
-                        </li>
-                        @endguest
-                    </ul>
-                </div>
-
-            </div>
-            <div class="col-sm-9">
-                <div class="row">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+        @yield('content')
     </div>
 
     <!-- jQuery -->
